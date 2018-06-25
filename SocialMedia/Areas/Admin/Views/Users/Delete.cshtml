@@ -1,0 +1,34 @@
+﻿@model DeleteUserViewModel
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h2 class="text-shadow">@ViewData["Title"] @Model.Username</h2>
+
+
+<div class="row">
+    <div class="col-md-4 form-color text-shadow">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="@Model.Name" class="form-control" disabled />
+                <span asp-validation-for="Name" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input asp-for="@Model.Username" class="form-control" disabled />
+                <span asp-validation-for="Username" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="@Model.Email" class="form-control" disabled />
+                <span asp-validation-for="Email" class="form-text text-danger"></span>
+            </div>
+            <input type="hidden" value="@Model.Id" />
+            <div>
+                <input class="btn btn-danger" type="submit" value="Delete User" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

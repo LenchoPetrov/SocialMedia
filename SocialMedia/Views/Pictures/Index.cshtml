@@ -1,0 +1,46 @@
+﻿@model IndexPicture
+@{
+    ViewData["Title"] = "Picture";
+}
+
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<br />
+<div class="container form-color">
+    <p class="header">
+        <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@Model.UserId">
+            @if (Model.UserProfilePhoto == null)
+            {
+                <span><img src="~/images/Default profile icon.png" class="avatar" /></span>
+            }
+            else
+            {
+                <span><img src="@Model.UserProfilePhoto" c class="avatar" /></span>
+            }
+            <span class="name text-shadow">@Model.Name</span>
+        </a>
+        <span class="date">• @Model.PublishDate</span>
+        @if (Model.UserName == User.Identity.Name)
+        {
+            <a asp-area="" asp-controller="Pictures" asp-action="Delete" asp-route-id="@Model.Id">
+                <img src="~/images/Delete Button.png" class="delete-picture edit-delete-panel" />
+            </a>
+            <a asp-area="" asp-controller="Pictures" asp-action="Edit" asp-route-id="@Model.Id">
+                <img src="~/images/Edit Button.png" class="edit-picture edit-delete-panel" />
+            </a>
+            <a asp-area="" asp-controller="Albums" asp-action="SetAsAlbumPhoto" asp-route-photoId="@Model.Id" asp-route-albumId="@Model.AlbumId">
+                <img src="~/images/Set As Album Photo Button.png" class="set-picture edit-delete-panel" />
+            </a>
+        }
+    </p>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <img src="@Model.Photo" class="img-responsive photo" />
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <form method="post" asp-action="Create" asp-controller="Comments">
+            <textarea rows="4" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+            <input type="hidden" name="pictureId" value="@Model.Id" />
+            <input class="btn btn-success" type="submit" value="Comment" />
+        </form>
+        @Html.Partial("Comments", Model.Comments)
+    </div>
+</div>

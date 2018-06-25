@@ -1,0 +1,26 @@
+﻿@model EditPicture
+@{
+    ViewData["Title"] = "Edit Picture";
+}
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<h2 class="text-shadow">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4 form-color text-shadow">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control my-input text-shadow" />
+                <span asp-validation-for="Description" class="form-text text-danger"></span>
+            </div>
+            <div>
+                <input class="btn btn-success" type="submit" value="Edit Picture" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

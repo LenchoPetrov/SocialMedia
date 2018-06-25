@@ -1,0 +1,58 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (Model.Pictures.Count() == 0)
+{
+    <div class="register-greeting">Hi, @User.Identity.Name! You can find and follow users <a asp-area="" asp-controller="Search" asp-action="Users">here</a>!</div>
+}
+else
+{
+    <div class="row">
+        <div class="main-view text-shadow form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            @foreach (var picture in Model.Pictures.OrderByDescending(p => p.PublishDate))
+            {
+                <div>
+                    <p class="my-row header">
+                        <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@picture.UserId">
+                            @if (picture.UserProfilePhoto == null)
+                            {
+                                <span><img src="~/images/Default profile icon.png" class="avatar" /></span>
+
+                            }
+                            else
+                            {
+                                <span><img src="@picture.UserProfilePhoto" class="avatar" /></span>
+                            }
+                            <span class="name text-shadow">@picture.Name</span>
+                        </a>
+                        <span class="date">• @picture.PublishDate</span>
+                    </p>
+                    <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@picture.Id" class="zoom">
+                        <img src="@picture.Photo" class="img-responsive photo" />
+                    </a>
+                    <form method="post" asp-controller="Pictures" asp-action="Index">
+                        <textarea rows="1" id="commentText" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                        <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
+                        <input onclick="myFunction()" class="btn btn-success" type="button" value="Comment" />
+                    </form>
+                    <div id="commentsReload">
+                        @Html.Partial("Comments", picture.Comments)
+                    </div>
+                </div>
+                <br />
+            }
+        </div>
+    </div>
+}
+<script>
+    function myFunction() {
+        var pic = $("#pictureId").val();
+        var comment = $("#commentText").val();
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+
+        location.reload();
+            $("#commentsReload").reload();
+        }
+</script>

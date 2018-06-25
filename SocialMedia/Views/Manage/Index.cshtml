@@ -1,0 +1,101 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData.AddActivePage(ManageNavPages.Index);
+}
+
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<figure class="snip1578 form-color">
+    @if (Model.ProfileImage == null)
+    {
+        <span><img src="~/images/Default profile icon.png" alt="profile-sample6" class="profile-image" /></span>
+
+    }
+    else
+    {
+        <span><img src="@Model.ProfileImage" alt="profile-sample6" class="profile-image" /></span>
+    }
+    <figcaption>
+        <h2 class="text-shadow">@Model.Name</h2>
+        <h5 class="text-shadow">@Model.Username</h5>
+        @*<div class="icons">
+                <a href="#"><i class="ion-social-twitter"></i></a>
+                <a href="#"> <i class="ion-social-instagram-outline"></i></a>
+                <a href="#"> <i class="ion-social-github"></i></a>
+            </div>*@
+    </figcaption>
+    <div class="menu">
+        <a asp-controller="Albums" asp-action="Index" asp-route-id="@Model.UserId" class="text-shadow menu-button">Pictures</a>
+        <a asp-action="ChangeProfilePicture" class="text-shadow menu-button">Change Profile Picture</a>
+        <a asp-controller="Manage" asp-action="AccountSettings" class="text-shadow">Account Settings</a>
+    </div>
+</figure>
+
+<div class="row">
+    <div class="main-view text-shadow form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        @foreach (var picture in Model.Pictures.OrderByDescending(p => p.PublishDate))
+        {
+            <div>
+                <p class="my-row header">
+                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@picture.UserId">
+                        @if (Model.ProfileImage == null)
+                        {
+                            <span><img src="~/images/Default profile icon.png" class="avatar" /></span>
+
+                        }
+                        else
+                        {
+                            <span><img src="@Model.ProfileImage" class="avatar" /></span>
+                        }
+                        <span class="name text-shadow">@picture.Name</span>
+                    </a>
+                    <span class="date">• @picture.PublishDate</span>
+                </p>
+                <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@picture.Id" class="zoom">
+                    <img src="@picture.Photo" class="img-responsive photo" />
+                </a>
+                <form method="post" asp-action="Create" asp-controller="Comments">
+                    <textarea rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                    <input type="hidden" name="pictureId" value="@picture.Id" />
+                    <input class="btn btn-success" type="submit" value="Comment" />
+                </form>
+                @if (picture.Comments.Count != 0)
+                {
+                    <div class="form-color stuck">
+                        @foreach (var comment in picture.Comments)
+                        {
+                            <div class="comment">
+                                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@comment.UserId">
+                                    @if (comment.UserProfileImage == null)
+                                    {
+                                        <span><img src="~/images/Default profile icon.png" class="comment-avatar" /></span>
+
+                                    }
+                                    else
+                                    {
+                                        <span><img src="@comment.UserProfileImage" c class="comment-avatar" /></span>
+                                    }
+                                    <span class="comment-name text-shadow">@comment.Name</span>
+                                </a>
+                                <span class="text-shadow comment-date">• @comment.PublishDate</span>
+                                @if (User.Identity.Name == picture.UserName || User.Identity.Name == comment.UserName)
+                                {
+                                    <a asp-controller="Comments" asp-action="Delete" asp-route-commentId="@comment.Id">
+                                        <button type="submit" class="close delete-comment" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </a>
+                                }
+                                <div class="comment-content text-shadow">@comment.Content</div>
+                            </div>
+                            <br />
+                        }
+                    </div>
+                }
+            </div>
+            <br />
+        }
+    </div>
+</div>
+

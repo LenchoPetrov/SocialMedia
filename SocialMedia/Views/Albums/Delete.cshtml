@@ -1,0 +1,24 @@
+﻿@model DeleteAlbum
+@{
+    ViewData["Title"] = "Delete Album";
+}
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+
+<h2 class="text-shadow">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4 form-color text-shadow">
+        <form method="post" asp-action="Destroy">
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control my-input text-shadow" />
+                <span asp-validation-for="Title" class="form-text text-danger"></span>
+            </div>
+            <div>
+                <input type="hidden" name="albumId" value="@Model.Id" />
+                <input class="btn btn-danger" type="submit" value="Delete Album" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

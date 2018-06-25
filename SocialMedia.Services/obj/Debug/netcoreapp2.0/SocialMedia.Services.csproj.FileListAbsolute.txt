@@ -1,0 +1,14 @@
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Services.deps.json
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Services.runtimeconfig.json
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Services.runtimeconfig.dev.json
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Services.dll
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Services.pdb
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Data.dll
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\bin\Debug\netcoreapp2.0\SocialMedia.Data.pdb
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.csprojResolveAssemblyReference.cache
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.csproj.CoreCompileInputs.cache
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.AssemblyInfoInputs.cache
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.AssemblyInfo.cs
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.csproj.CopyComplete
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.dll
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Services\obj\Debug\netcoreapp2.0\SocialMedia.Services.pdb

@@ -1,0 +1,47 @@
+﻿@model PicturesAlbum
+@{
+    ViewData["Title"] = "Create Album";
+    var num = 1;
+}
+<link href="~/css/albums.css" rel="stylesheet" />
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+
+<br />
+<div class="container form-color">
+    <br />
+    @if (Model.UserName == User.Identity.Name || User.IsInRole("Administrator"))
+    {
+        <article class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="panel my-panel">
+                <div class="panel-body">
+                    <div class="add-button">
+                        <a asp-area="" asp-controller="Pictures" asp-action="Upload" asp-route-albumId="@Model.AlbumId" asp-route-albumTitle="@Model.AlbumName" class="zoom add">
+                            <img src="~/images/Add Button.png" class="zoom add-img" />
+                        </a>
+                    </div>
+                    <div class="edit-delete">
+                        <a asp-area="" asp-controller="Albums" asp-action="Edit" asp-route-albumId="@Model.AlbumId" class="edit-img">
+                            <img src="~/images/Edit Button.png" />
+                        </a>
+                        <a asp-area="" asp-controller="Albums" asp-action="Delete" asp-route-albumId="@Model.AlbumId" class="delete-img">
+                            <img src="~/images/Delete Button.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    }
+
+    @foreach (var pic in Model.Pictures)
+    {
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 picture">
+            @{
+                var base64 = Convert.ToBase64String(pic.Photo);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+            <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@pic.Id" class="zoom">
+                <img src="@imgSrc" class="img-responsive" />
+            </a>
+        </div>
+    }
+</div>

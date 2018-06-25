@@ -1,0 +1,26 @@
+﻿@model List<Followers>
+
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+
+<div class="container form-color message-container">
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+        @foreach (var user in Model)
+        {
+            <div class="user">
+                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id">
+                    @if (user.UserProfileImage == null)
+                    {
+                        <span><img src="~/images/Default profile icon.png" class="message-avatar" /></span>
+                    }
+                    else
+                    {
+                        <span><img src="@user.UserProfileImage" class="message-avatar" /></span>
+                    }
+                    <span class="user-name text-shadow">@user.Name</span>
+                    <span class="username text-shadow">@user.Username</span>
+                </a>
+            </div>
+            <br />
+        }
+    </div>
+</div>

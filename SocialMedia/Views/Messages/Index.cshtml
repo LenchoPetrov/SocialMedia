@@ -1,0 +1,32 @@
+﻿@model List<IndexMessage>
+@{
+    ViewData["Title"] = "Messages";
+}
+<br />
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a asp-area="" asp-controller="Messages" asp-action="Send" class="text-shadow btn btn-success">Send Message</a>
+
+<br />
+<div class="container form-color message-container">
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+        @foreach (var message in Model)
+        {
+            <div class="messaage">
+                <a asp-area="" asp-controller="Messages" asp-action="Message" asp-route-RecepientId="@message.RecipientId" asp-route-SenderId="@message.SenderId">
+                    @if (message.RecipientProfileImage == null)
+                    {
+                        <span><img src="~/images/Default profile icon.png" class="message-avatar" /></span>
+                    }
+                    else
+                    {
+                        <span><img src="@message.RecipientProfileImage" class="message-avatar" /></span>
+                    }
+                    <span class="message-name text-shadow">@message.RecipientName</span>
+                    <span class="text-shadow message-date">• @message.Date</span>
+                    <div class="message-content text-shadow">@message.Content</div>
+                </a>
+            </div>
+            <br />
+        }
+    </div>
+</div>

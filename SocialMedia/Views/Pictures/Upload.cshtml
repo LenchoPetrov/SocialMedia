@@ -1,0 +1,46 @@
+﻿@model UploadPicture
+@{
+    ViewData["Title"] = "Upload Picture";
+}
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+
+<h2 class="text-shadow">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4 form-color text-shadow">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control my-input text-shadow" />
+                <span asp-validation-for="Description" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="file" name="Photo" style="display: none" />
+                <button type="button" class="btn btn-default" onclick="document.getElementsByName('Photo')[0].click()">Choose picture!</button>
+            </div>
+            <div class="form-group">
+                <label>Album</label>
+                @if (Model.AlbumTitle == null && Model.AlbumId == 0)
+                {
+                    <select asp-for="AlbumId" asp-items="@Model.Albums" class="form-control"></select>
+                    <span asp-validation-for="AlbumId" class="form-text text-danger"></span>
+                }
+                else
+                {
+                    <select class="form-control" disabled>
+                        <option selected disabled>@Model.AlbumTitle</option>
+                    </select>
+                    <input type="hidden" name="AlbumId" value="@Model.AlbumId" />
+                }
+            </div>
+            <div>
+                <input class="btn btn-success" type="submit" value="Upload Picture" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

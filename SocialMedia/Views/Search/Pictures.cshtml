@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PictureSearch>
+
+@{
+    ViewData["Title"] = "Pictures";
+}
+
+<h1 class="text-shadow">Search Pictures</h1>
+<a asp-area="" asp-controller="Search" asp-action="Pictures" asp-route-SearchString="@string.Empty" class="text-shadow">
+    Pictures
+</a>
+<a asp-area="" asp-controller="Search" asp-action="Users" asp-route-SearchString="@string.Empty" class="text-shadow">
+    Users
+</a>
+<form asp-controller="Search" asp-action="Pictures" method="get">
+    <input class="form-control my-input text-shadow form-color" type="text" name="SearchString" placeholder="Search picture by description" style="width: 250px;float: left">
+    <div style="overflow: hidden; padding-right: .5em;">
+        <button type="submit" class="btn btn-default">Search</button>
+    </div>
+</form>
+<br />
+@if (Model != null)
+{
+    <div class="container form-color">
+        @foreach (var pic in Model)
+        {
+            <div class="col-md-1">
+                <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@pic.Id" class="zoom">
+                    <img src="@pic.Photo" class="img-responsive photo" />
+                </a>
+            </div>
+        }
+    </div>
+}

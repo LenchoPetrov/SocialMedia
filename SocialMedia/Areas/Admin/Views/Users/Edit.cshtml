@@ -1,0 +1,43 @@
+﻿@model EditUserViewModel
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h2 class="text-shadow">@ViewData["Title"] @Model.Username</h2>
+
+
+<div class="row">
+    <div class="col-md-4 form-color text-shadow">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input asp-for="@Model.Username" class="form-control my-input text-shadow" disabled />
+                <span asp-validation-for="Username" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="@Model.Name" class="form-control my-input text-shadow" />
+                <span asp-validation-for="Name" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="@Model.Email" class="form-control my-input text-shadow" />
+                <span asp-validation-for="Email" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate"></label>
+                <input asp-for="@Model.BirthDate" type="date" min="1940-01-01" max="2013-01-01" class="form-control my-input text-shadow" />
+                <span asp-validation-for="BirthDate" class="form-text text-danger"></span>
+            </div>
+            <input type="hidden" value="@Model.Id" />
+            <div>
+                <input class="btn btn-warning" type="submit" value="Edit User" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

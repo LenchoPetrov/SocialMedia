@@ -1,0 +1,48 @@
+﻿@model UserAlbums
+@{
+    ViewData["Title"] = Model.UserName + "'s Albums";
+}
+<script src="~/js/albums.js"></script>
+<link href="~/css/albums.css" rel="stylesheet" />
+<script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+
+<h2 class="text-shadow">@ViewData["Title"]</h2>
+
+<div class="container form-color">
+    <br />
+    @if (Model.UserName == User.Identity.Name || User.IsInRole("Administrator"))
+    {
+        <article class="col-xs-12 col-sm-6 col-md-3">
+            <div class="panel my-panel">
+                <div class="panel-body">
+                    <a asp-area="" asp-controller="Albums" asp-action="Create" class="zoom">
+                        <img src="http://www.clker.com/cliparts/e/6/d/7/1194994263582955302add.svg.hi.png" />
+                    </a>
+                </div>
+            </div>
+        </article>
+    }
+    @foreach (var album in Model.Albums)
+    {
+        <article class="col-xs-12 col-sm-6 col-md-3">
+            <div class="panel panel-default my-panel">
+                <div class="panel-body">
+                    <a asp-area="" asp-controller="Albums" asp-action="Album" asp-route-id="@album.Id" class="zoom">
+                        @if (album.AlbumProfileImage != null)
+                        {
+                            <img src="@album.AlbumProfileImage" class="album-image" />
+                        }
+                        else
+                        {
+                            <img src="~/images/Default album photo.png" />
+                        }
+                        <div class="panel-footer">
+                            <h4 class="text-shadow">@album.Title</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    }
+</div>

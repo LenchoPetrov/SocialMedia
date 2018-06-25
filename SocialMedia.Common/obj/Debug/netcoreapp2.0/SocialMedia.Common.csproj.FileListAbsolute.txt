@@ -1,0 +1,8 @@
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\bin\Debug\netcoreapp2.0\SocialMedia.Common.deps.json
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\bin\Debug\netcoreapp2.0\SocialMedia.Common.dll
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\bin\Debug\netcoreapp2.0\SocialMedia.Common.pdb
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\obj\Debug\netcoreapp2.0\SocialMedia.Common.csproj.CoreCompileInputs.cache
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\obj\Debug\netcoreapp2.0\SocialMedia.Common.AssemblyInfoInputs.cache
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\obj\Debug\netcoreapp2.0\SocialMedia.Common.AssemblyInfo.cs
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\obj\Debug\netcoreapp2.0\SocialMedia.Common.dll
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Common\obj\Debug\netcoreapp2.0\SocialMedia.Common.pdb
