@@ -4,15 +4,15 @@
     ViewData["Title"] = "Pictures";
 }
 
-<h1 class="text-shadow">Search Pictures</h1>
-<a asp-area="" asp-controller="Search" asp-action="Pictures" asp-route-SearchString="@string.Empty" class="text-shadow">
+<h1 class="text-main">Search Pictures</h1>
+<a asp-area="" asp-controller="Search" asp-action="Pictures" asp-route-SearchString="@string.Empty" class="text-main">
     Pictures
 </a>
-<a asp-area="" asp-controller="Search" asp-action="Users" asp-route-SearchString="@string.Empty" class="text-shadow">
+<a asp-area="" asp-controller="Search" asp-action="Users" asp-route-SearchString="@string.Empty" class="text-main">
     Users
 </a>
 <form asp-controller="Search" asp-action="Pictures" method="get">
-    <input class="form-control my-input text-shadow form-color" type="text" name="SearchString" placeholder="Search picture by description" style="width: 250px;float: left">
+    <input class="form-control my-input text-main form-color" type="text" name="SearchString" placeholder="Search picture by description" style="width: 250px;float: left">
     <div style="overflow: hidden; padding-right: .5em;">
         <button type="submit" class="btn btn-default">Search</button>
     </div>

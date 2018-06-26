@@ -2,16 +2,16 @@
 @{
     ViewData["Title"] = "Delete Album";
 }
-<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
 
-<h2 class="text-shadow">@ViewData["Title"]</h2>
+<h2 class="text-main">@ViewData["Title"]</h2>
 
 <div class="row">
-    <div class="col-md-4 form-color text-shadow">
+    <div class="col-md-4 form-color text-main">
         <form method="post" asp-action="Destroy">
             <div class="form-group">
                 <label asp-for="Title"></label>
-                <input asp-for="Title" class="form-control my-input text-shadow" />
+                <input asp-for="Title" class="form-control my-input text-main" />
                 <span asp-validation-for="Title" class="form-text text-danger"></span>
             </div>
             <div>

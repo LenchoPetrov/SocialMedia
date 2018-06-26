@@ -4,21 +4,21 @@
     ViewData["Title"] = "Users";
 }
 
-<h1 class="text-shadow">Search Users</h1>
-<a asp-area="" asp-controller="Search" asp-action="Pictures" asp-route-SearchString="@string.Empty" class="text-shadow">
+<h1 class="text-main">Search Users</h1>
+<a asp-area="" asp-controller="Search" asp-action="Pictures" asp-route-SearchString="@string.Empty" class="text-main">
     Pictures
 </a>
-<a asp-area="" asp-controller="Search" asp-action="Users" asp-route-SearchString="@string.Empty" class="text-shadow">
+<a asp-area="" asp-controller="Search" asp-action="Users" asp-route-SearchString="@string.Empty" class="text-main">
     Users
 </a>
 <form asp-controller="Search" asp-action="Users" method="get">
-    <input class="form-control my-input text-shadow form-color" type="text" name="SearchString" placeholder="Search user by name/username" style="width: 250px;float: left">
+    <input class="form-control my-input text-main form-color" type="text" name="SearchString" placeholder="Search user by name/username" style="width: 250px;float: left">
     <div style="overflow: hidden; padding-right: .5em;">
         <button type="submit" class="btn btn-default">Search</button>
     </div>
 </form>
 <br />
-<table class="table form-color text-shadow">
+<table class="table form-color text-main">
     <thead>
         <tr>
             <th>Name</th>
@@ -31,18 +31,18 @@
         {
             <tr>
                 <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-shadow">
+                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
                         @user.Name
                     </a>
                 </td>
                 <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-shadow">
+                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
 
                         @user.Username
                     </a>
                 </td>
                 <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-shadow">
+                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
                         @user.Email
                     </a>
                 </td>

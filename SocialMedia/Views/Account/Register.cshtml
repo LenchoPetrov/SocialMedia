@@ -4,43 +4,43 @@
 }
 <link href="~/css/site.css" rel="stylesheet" />
 
-<h2 class="text-shadow">@ViewData["Title"]</h2>
+<h2 class="text-main">@ViewData["Title"]</h2>
 
 <div class="row">
-    <div class="col-md-6 form-color text-shadow">
+    <div class="col-md-6 form-color text-main">
         <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Username"></label>
-                <input asp-for="Username" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="Username"></label>
+                <input asp-for="Username" class="form-control my-input text-main" />
                 <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Name"></label>
-                <input asp-for="Name" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="Name"></label>
+                <input asp-for="Name" class="form-control my-input text-main" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="Email"></label>
+                <input asp-for="Email" class="form-control my-input text-main" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BirthDate"></label>
-                <input asp-for="BirthDate" type="date" min="1940-01-01" max="2013-01-01" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="BirthDate"></label>
+                <input asp-for="BirthDate" type="date" min="1940-01-01" max="2013-01-01" class="form-control my-input text-main" />
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="Password"></label>
+                <input asp-for="Password" class="form-control my-input text-main" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ConfirmPassword"></label>
-                <input asp-for="ConfirmPassword" class="form-control my-input text-shadow" />
+                <label class="text-main" asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control my-input text-main" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-default">Register</button>
+            <button type="submit" class="btn btn-default my-btns">Register</button>
             <br />
             <br />
         </form>

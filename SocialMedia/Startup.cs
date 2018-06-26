@@ -13,6 +13,7 @@
     using SocialMedia.Services.Admin.Implementations;
     using SocialMedia.Services.Admin.Interfaces;
     using SocialMedia.Data.Data;
+    using Microsoft.AspNetCore.Mvc;
 
     public class Startup
     {
@@ -37,6 +38,11 @@
             })
                 .AddEntityFrameworkStores<SocialMediaDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+            });
 
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<IAdminService, AdminService>();

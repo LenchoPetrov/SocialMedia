@@ -10,7 +10,7 @@
 else
 {
     <div class="row">
-        <div class="main-view text-shadow form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <div class="main-view text-main form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
             @foreach (var picture in Model.Pictures.OrderByDescending(p => p.PublishDate))
             {
                 <div>
@@ -25,7 +25,7 @@ else
                             {
                                 <span><img src="@picture.UserProfilePhoto" class="avatar" /></span>
                             }
-                            <span class="name text-shadow">@picture.Name</span>
+                            <span class="name text-main">@picture.Name</span>
                         </a>
                         <span class="date">• @picture.PublishDate</span>
                     </p>
@@ -33,9 +33,9 @@ else
                         <img src="@picture.Photo" class="img-responsive photo" />
                     </a>
                     <form method="post" asp-controller="Comments" asp-action="Create">
-                        <textarea rows="1" id="commentText" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                        <textarea rows="1" id="commentText" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
                         <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
-                        <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
+                        <input onclick="addComment()" class="btn my-btns" type="button" value="Comment" />
                     </form>
                     <div id="commentsReload">
                         @Html.Partial("Comments", picture.Comments)

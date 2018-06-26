@@ -3,7 +3,7 @@
     ViewData["Title"] = "Picture";
 }
 
-<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
 <br />
 <div class="container form-color">
     <p class="header">
@@ -16,7 +16,7 @@
             {
                 <span><img src="@Model.UserProfilePhoto" c class="avatar" /></span>
             }
-            <span class="name text-shadow">@Model.Name</span>
+            <span class="name text-main">@Model.Name</span>
         </a>
         <span class="date">• @Model.PublishDate</span>
         @if (Model.UserName == User.Identity.Name)
@@ -37,7 +37,7 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <form method="post" asp-action="Create" asp-controller="Comments">
-            <textarea id="commentText" rows="4" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+            <textarea id="commentText" rows="4" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
             <input type="hidden" name="pictureId" value="@Model.Id" id="pictureId" />
             <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
         </form>

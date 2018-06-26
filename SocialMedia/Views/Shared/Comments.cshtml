@@ -16,9 +16,9 @@
                     {
                         <span><img src="@comment.UserProfileImage" class="comment-avatar" /></span>
                     }
-                    <span class="comment-name text-shadow">@comment.Name</span>
+                    <span class="comment-name text-main">@comment.Name</span>
                 </a>
-                <span class="text-shadow comment-date">• @comment.PublishDate</span>
+                <span class="text-main comment-date">• @comment.PublishDate</span>
                 @if (User.Identity.Name == comment.PictureOwnerUserName || User.Identity.Name == comment.UserName || User.IsInRole("Administrator"))
                 {
                     <a asp-controller="Comments" asp-action="Delete" asp-route-commentId="@comment.Id" asp-route-pictureId="@comment.PictureId">
@@ -27,7 +27,7 @@
                         </button>
                     </a>
                 }
-                <div class="comment-content text-shadow">@comment.Content</div>
+                <div class="comment-content text-main">@comment.Content</div>
             </div>
             <br />
         }

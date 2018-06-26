@@ -5,9 +5,9 @@
 <script src="~/js/albums.js"></script>
 <link href="~/css/albums.css" rel="stylesheet" />
 <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
-<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
 
-<h2 class="text-shadow">@ViewData["Title"]</h2>
+<h2 class="text-main">@ViewData["Title"]</h2>
 
 <div class="container form-color">
     <br />
@@ -38,7 +38,7 @@
                             <img src="~/images/Default album photo.png" />
                         }
                         <div class="panel-footer">
-                            <h4 class="text-shadow">@album.Title</h4>
+                            <h4 class="text-main">@album.Title</h4>
                         </div>
                     </a>
                 </div>

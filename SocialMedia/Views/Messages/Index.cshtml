@@ -3,8 +3,8 @@
     ViewData["Title"] = "Messages";
 }
 <br />
-<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
-<a asp-area="" asp-controller="Messages" asp-action="Send" class="text-shadow btn btn-success">Send Message</a>
+<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a asp-area="" asp-controller="Messages" asp-action="Send" class="text-main btn btn-success">Send Message</a>
 
 <br />
 <div class="container form-color message-container">
@@ -21,9 +21,9 @@
                     {
                         <span><img src="@message.RecipientProfileImage" class="message-avatar" /></span>
                     }
-                    <span class="message-name text-shadow">@message.RecipientName</span>
-                    <span class="text-shadow message-date">• @message.Date</span>
-                    <div class="message-content text-shadow">@message.Content</div>
+                    <span class="message-name text-main">@message.RecipientName</span>
+                    <span class="text-main message-date">• @message.Date</span>
+                    <div class="message-content text-main">@message.Content</div>
                 </a>
             </div>
             <br />

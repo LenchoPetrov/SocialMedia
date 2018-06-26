@@ -17,8 +17,8 @@
         <span><img src="@Model.ProfileImage" alt="profile-sample6" class="profile-image" /></span>
     }
     <figcaption>
-        <h2 class="text-shadow">@Model.Name</h2>
-        <h5 class="text-shadow">@Model.Username</h5>
+        <h2 class="text-main">@Model.Name</h2>
+        <h5 class="text-main">@Model.Username</h5>
         @*<div class="icons">
                 <a href="#"><i class="ion-social-twitter"></i></a>
                 <a href="#"> <i class="ion-social-instagram-outline"></i></a>
@@ -26,14 +26,14 @@
             </div>*@
     </figcaption>
     <div class="menu">
-        <a asp-controller="Albums" asp-action="Index" asp-route-id="@Model.UserId" class="text-shadow menu-button">Pictures</a>
-        <a asp-action="ChangeProfilePicture" class="text-shadow menu-button">Change Profile Picture</a>
-        <a asp-controller="Manage" asp-action="AccountSettings" class="text-shadow">Account Settings</a>
+        <a asp-controller="Albums" asp-action="Index" asp-route-id="@Model.UserId" class="text-main menu-button">Pictures</a>
+        <a asp-action="ChangeProfilePicture" class="text-main menu-button">Change Profile Picture</a>
+        <a asp-controller="Manage" asp-action="AccountSettings" class="text-main">Account Settings</a>
     </div>
 </figure>
 
 <div class="row">
-    <div class="main-view text-shadow form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <div class="main-view text-main form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
         @foreach (var picture in Model.Pictures.OrderByDescending(p => p.PublishDate))
         {
             <div>
@@ -48,7 +48,7 @@
                         {
                             <span><img src="@Model.ProfileImage" class="avatar" /></span>
                         }
-                        <span class="name text-shadow">@picture.Name</span>
+                        <span class="name text-main">@picture.Name</span>
                     </a>
                     <span class="date">• @picture.PublishDate</span>
                 </p>
@@ -56,7 +56,7 @@
                     <img src="@picture.Photo" class="img-responsive photo" />
                 </a>
                 <form method="post" asp-action="Create" asp-controller="Comments">
-                    <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                    <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
                     <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
                     <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
                 </form>

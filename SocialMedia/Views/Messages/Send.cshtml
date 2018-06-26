@@ -3,16 +3,16 @@
     ViewData["Title"] = "Send Message";
 }
 
-<a class="glyphicon glyphicon-arrow-left text-shadow back" href="back" onClick="history.go(-1); return false;">Back</a>
+<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
 <br />
 <div class="container form-color">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <form method="post">
-            <div class="form-group text-shadow">
-                User: <select asp-items="@Model.Users" class="form-control my-input text-shadow" asp-for="RecepientId"></select>
+            <div class="form-group text-main">
+                User: <select asp-items="@Model.Users" class="form-control my-input text-main" asp-for="RecepientId"></select>
                 <span asp-validation-for="RecepientId" class="form-text text-danger"></span>
             </div>
-            <textarea rows="16" class="comment-textarea form-control my-input text-shadow" placeholder="Send your message...." name="Content"></textarea>
+            <textarea rows="16" class="comment-textarea form-control my-input text-main" placeholder="Send your message...." name="Content"></textarea>
             <br />
             <div>
                 <input class="btn btn-success center-block btn-lg" type="submit" value="Send" />

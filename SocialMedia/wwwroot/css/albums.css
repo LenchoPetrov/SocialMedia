@@ -156,7 +156,7 @@
         padding-top: 45%;
         font-size: 30px;
         color: #fff;
-        text-shadow: 2px 2px 4px #000;
+        text-main: 2px 2px 4px #000;
         opacity: 0;
         filter: dropshadow(color=#000000,offx=2,offy=2);
         -webkit-transition: opacity .5s;
