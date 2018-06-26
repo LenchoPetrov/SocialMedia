@@ -98,7 +98,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            <div class=\"user\">\r\n                ");
             EndContext();
             BeginContext(359, 637, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09af63df03df4d648c0bc9801adf4b58", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10f235ddc9b448ada4ae527e41c41556", async() => {
                 BeginContext(439, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -112,7 +112,7 @@ using SocialMedia.Data.Models;
                 WriteLiteral("                        <span>");
                 EndContext();
                 BeginContext(551, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0304ef79068b4f2081dd3f9e594eaa42", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "efecd27f991d49cda76a7d7b22f1510d", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

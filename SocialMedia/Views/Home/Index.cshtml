@@ -32,10 +32,10 @@ else
                     <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@picture.Id" class="zoom">
                         <img src="@picture.Photo" class="img-responsive photo" />
                     </a>
-                    <form method="post" asp-controller="Pictures" asp-action="Index">
+                    <form method="post" asp-controller="Comments" asp-action="Create">
                         <textarea rows="1" id="commentText" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
                         <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
-                        <input onclick="myFunction()" class="btn btn-success" type="button" value="Comment" />
+                        <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
                     </form>
                     <div id="commentsReload">
                         @Html.Partial("Comments", picture.Comments)
@@ -47,7 +47,7 @@ else
     </div>
 }
 <script>
-    function myFunction() {
+    function addComment() {
         var pic = $("#pictureId").val();
         var comment = $("#commentText").val();
         $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });

@@ -56,46 +56,27 @@
                     <img src="@picture.Photo" class="img-responsive photo" />
                 </a>
                 <form method="post" asp-action="Create" asp-controller="Comments">
-                    <textarea rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
-                    <input type="hidden" name="pictureId" value="@picture.Id" />
-                    <input class="btn btn-success" type="submit" value="Comment" />
+                    <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                    <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
+                    <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
                 </form>
-                @if (picture.Comments.Count != 0)
-                {
-                    <div class="form-color stuck">
-                        @foreach (var comment in picture.Comments)
-                        {
-                            <div class="comment">
-                                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@comment.UserId">
-                                    @if (comment.UserProfileImage == null)
-                                    {
-                                        <span><img src="~/images/Default profile icon.png" class="comment-avatar" /></span>
-
-                                    }
-                                    else
-                                    {
-                                        <span><img src="@comment.UserProfileImage" c class="comment-avatar" /></span>
-                                    }
-                                    <span class="comment-name text-shadow">@comment.Name</span>
-                                </a>
-                                <span class="text-shadow comment-date">• @comment.PublishDate</span>
-                                @if (User.Identity.Name == picture.UserName || User.Identity.Name == comment.UserName)
-                                {
-                                    <a asp-controller="Comments" asp-action="Delete" asp-route-commentId="@comment.Id">
-                                        <button type="submit" class="close delete-comment" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </a>
-                                }
-                                <div class="comment-content text-shadow">@comment.Content</div>
-                            </div>
-                            <br />
-                        }
-                    </div>
-                }
+                <div id="commentsReload">
+                    @Html.Partial("Comments", picture.Comments)
+                </div>
             </div>
             <br />
         }
     </div>
 </div>
 
+
+<script>
+    function addComment() {
+        var pic = $("#pictureId").val();
+        var comment = $("#commentText").val();
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+
+        location.reload();
+            $("#commentsReload").reload();
+        }
+</script>

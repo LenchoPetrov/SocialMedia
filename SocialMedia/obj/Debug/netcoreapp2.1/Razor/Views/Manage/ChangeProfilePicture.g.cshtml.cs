@@ -109,7 +109,7 @@ using SocialMedia.Views.Manage;
             WriteLiteral("</h4>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-6 text-shadow form-color text-shadow\">\r\n        ");
             EndContext();
             BeginContext(395, 455, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "732f15956af84a4c993e91a79895c5fd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6a8bea0add44f649d6407b59ac6b445", async() => {
                 BeginContext(445, 398, true);
                 WriteLiteral(@"
             <br />

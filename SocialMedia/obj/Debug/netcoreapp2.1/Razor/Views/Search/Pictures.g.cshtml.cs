@@ -103,7 +103,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n<h1 class=\"text-shadow\">Search Pictures</h1>\r\n");
             EndContext();
             BeginContext(129, 140, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5defc1c2d03847bfab22c9e7b784d72f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93114307ec0c4bde97254cacbde246e0", async() => {
                 BeginContext(249, 16, true);
                 WriteLiteral("\r\n    Pictures\r\n");
                 EndContext();
@@ -143,7 +143,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(271, 134, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63f7462c12fe4b5a8a351a26bec25f60", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "925a0f05bc3342b7acd2299cfcc78821", async() => {
                 BeginContext(388, 13, true);
                 WriteLiteral("\r\n    Users\r\n");
                 EndContext();
@@ -183,7 +183,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(407, 390, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "913460c6be5d454ca3a1a2d55b76f60b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ebb1b6b2f9294c0e99af0d0c91e59572", async() => {
                 BeginContext(472, 318, true);
                 WriteLiteral(@"
     <input class=""form-control my-input text-shadow form-color"" type=""text"" name=""SearchString"" placeholder=""Search picture by description"" style=""width: 250px;float: left"">
@@ -234,7 +234,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            <div class=\"col-md-1\">\r\n                ");
             EndContext();
             BeginContext(971, 193, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "abc766542ee84b29a7a4bf9dd1acfda3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e4c957591c604424b4ce48ac4e3bf420", async() => {
                 BeginContext(1067, 26, true);
                 WriteLiteral("\r\n                    <img");
                 EndContext();

@@ -78,13 +78,25 @@
                     <img src="@picture.Photo" class="img-responsive photo" />
                 </a>
                 <form method="post" asp-action="Create" asp-controller="Comments">
-                    <textarea rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
-                    <input type="hidden" name="pictureId" value="@picture.Id" />
-                    <input class="btn btn-success" type="submit" value="Comment" />
+                    <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+                    <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
+                    <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
                 </form>
-                @Html.Partial("Comments", picture.Comments)
+                <div id="commentsReload">
+                    @Html.Partial("Comments", picture.Comments)
+                </div>
             </div>
             <br />
         }
     </div>
 </div>
+<script>
+    function addComment() {
+        var pic = $("#pictureId").val();
+        var comment = $("#commentText").val();
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+
+        location.reload();
+            $("#commentsReload").reload();
+        }
+</script>

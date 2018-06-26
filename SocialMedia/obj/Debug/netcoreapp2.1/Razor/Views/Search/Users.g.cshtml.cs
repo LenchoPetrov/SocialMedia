@@ -102,7 +102,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n<h1 class=\"text-shadow\">Search Users</h1>\r\n");
             EndContext();
             BeginContext(118, 140, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d2b32d253ed64803b3222ba366f04b43", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06089e69a497406c8fb3688820d3f5d7", async() => {
                 BeginContext(238, 16, true);
                 WriteLiteral("\r\n    Pictures\r\n");
                 EndContext();
@@ -142,7 +142,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(260, 134, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e1790685c04919a918563e95896a81", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d460e33fa2f49d8a9751e8184cc49e8", async() => {
                 BeginContext(377, 13, true);
                 WriteLiteral("\r\n    Users\r\n");
                 EndContext();
@@ -182,7 +182,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(396, 386, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "397f0859a39b4c23afe7f15263ea0f20", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0855a3c5db584be7aec2a4ca7ffb7647", async() => {
                 BeginContext(458, 317, true);
                 WriteLiteral(@"
     <input class=""form-control my-input text-shadow form-color"" type=""text"" name=""SearchString"" placeholder=""Search user by name/username"" style=""width: 250px;float: left"">
@@ -224,7 +224,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            <tr>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1128, 162, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d432226eefce4b9bb6c4f20a7ff4b53e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ef50941c4e241538ec01f61e2f306a1", async() => {
                 BeginContext(1228, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();
@@ -274,7 +274,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1357, 168, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "331c0b1d26734dd1b92e206ef1726cb7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e50c5c7230c4ffcb3ccacb505d5e68d", async() => {
                 BeginContext(1457, 28, true);
                 WriteLiteral("\r\n\r\n                        ");
                 EndContext();
@@ -324,7 +324,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1592, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "390416f5339f4e62b97e7910d54a2471", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "748cb8771c3f47ce8cc662cf2e65fced", async() => {
                 BeginContext(1692, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();

@@ -37,10 +37,23 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <form method="post" asp-action="Create" asp-controller="Comments">
-            <textarea rows="4" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
-            <input type="hidden" name="pictureId" value="@Model.Id" />
-            <input class="btn btn-success" type="submit" value="Comment" />
+            <textarea id="commentText" rows="4" class="comment-textarea form-control my-input text-shadow" placeholder="Comment this photo...." name="commentContent"></textarea>
+            <input type="hidden" name="pictureId" value="@Model.Id" id="pictureId" />
+            <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
         </form>
-        @Html.Partial("Comments", Model.Comments)
+        <div id="commentsReload">
+            @Html.Partial("Comments", Model.Comments)
+        </div>
     </div>
 </div>
+
+<script>
+    function addComment() {
+        var pic = $("#pictureId").val();
+        var comment = $("#commentText").val();
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+
+        location.reload();
+            $("#commentsReload").reload();
+        }
+</script>

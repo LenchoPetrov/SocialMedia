@@ -124,7 +124,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("                        <span>");
             EndContext();
             BeginContext(655, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c05c23d9f86841d58ca2f78a7711fdaa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a7b4b3170a8340c1bab3e4a54a690226", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -176,7 +176,7 @@ WriteAttributeValue("", 847, Model.UserProfileImage, 847, 23, false);
             WriteLiteral("                        <span>");
             EndContext();
             BeginContext(1105, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b0db641781574c3cafef30ab2c4b835f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a83f250e4df047dba86bd3206022d1d8", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -252,7 +252,7 @@ WriteAttributeValue("", 1297, Model.RecipientProfileImage, 1297, 28, false);
             WriteLiteral("        ");
             EndContext();
             BeginContext(1617, 431, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6970067060e4a119a4946282d172a0a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6e2b3fe9057409bac6dc427c0517ac4", async() => {
                 BeginContext(1700, 341, true);
                 WriteLiteral(@"
             <textarea rows=""1"" class=""comment-textarea form-control my-input text-shadow"" placeholder=""Send your message...."" name=""Content""></textarea>

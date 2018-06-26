@@ -109,7 +109,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            <div class=\"comment\">\r\n                ");
             EndContext();
             BeginContext(204, 580, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7958029de61041b780a12f224cd51179", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "376b64be5e7045dc9ca0545afb469f61", async() => {
                 BeginContext(291, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -123,7 +123,7 @@ using SocialMedia.Data.Models;
                 WriteLiteral("                        <span>");
                 EndContext();
                 BeginContext(406, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f57c81f18c8845178d9480c567477fe9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e6b2c062df66433ba86c919a13c2c6ef", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -234,7 +234,7 @@ WriteAttributeValue("", 599, comment.UserProfileImage, 599, 25, false);
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1061, 350, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c203273c50fb42c5aa24dffa25bef543", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02ef84ee3ed14ff1a7dd96413cc9407c", async() => {
                 BeginContext(1185, 222, true);
                 WriteLiteral("\r\n                        <button type=\"submit\" class=\"close delete-comment\" aria-label=\"Close\">\r\n                            <span aria-hidden=\"true\">&times;</span>\r\n                        </button>\r\n                    ");
                 EndContext();
