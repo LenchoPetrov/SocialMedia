@@ -35,7 +35,9 @@
                         null : String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(this.db.Users.FirstOrDefault(u => u.Id == c.UserId).ProfilePicture)),
                     PublishDate = c.PublishDate,
                     UserId = c.UserId,
-                    UserName = this.db.Users.FirstOrDefault(u => u.Id == c.UserId).UserName
+                    UserName = this.db.Users.FirstOrDefault(u => u.Id == c.UserId).UserName,
+                    PictureOwnerUserName = user.UserName,
+                    PictureId = c.PictureId
                 }).ToList();
                 var picture = new IndexPicture
                 {

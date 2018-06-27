@@ -23,13 +23,9 @@
                 Task.Run(async () =>
                 {
                     var adminName = GlobalConstants.AdministratorRole;
-                    //var authorName = GlobalConstants.AuthorRole;
-                    //var trainerName = GlobalConstants.TrainerRole;
-
+                    
                     var adminExists = await roleManager.RoleExistsAsync(adminName);
-                    //var authorExists = await roleManager.RoleExistsAsync(authorName);
-                    //var trainerExists = await roleManager.RoleExistsAsync(trainerName);
-
+                
                     if (!adminExists)
                     {
                         await roleManager.CreateAsync(new IdentityRole
@@ -37,21 +33,6 @@
                             Name = adminName
                         });
                     }
-                    //if (!authorExists)
-                    //{
-                    //    await roleManager.CreateAsync(new IdentityRole
-                    //    {
-                    //        Name = authorName
-                    //    });
-                    //}
-
-                    //if (!trainerExists)
-                    //{
-                    //    await roleManager.CreateAsync(new IdentityRole
-                    //    {
-                    //        Name = trainerName
-                    //    });
-                    //}
 
 
                     var adminUser = await userManager.FindByEmailAsync("admin@mail.bg");
@@ -81,55 +62,7 @@
                         await userManager.CreateAsync(adminUser, "123456");
 
                         await userManager.AddToRoleAsync(adminUser, adminName);
-                    }
-
-                    //var authorUser = new User
-                    //{
-                    //    Email = "test@mail.bg",
-                    //    UserName = "test1",
-                    //    Name = "TESTA TEST",
-                    //    BirthDate = DateTime.UtcNow
-                    //};
-
-                    //await userManager.CreateAsync(authorUser, "123456");
-
-                    //await userManager.AddToRoleAsync(authorUser, authorName);
-
-                    //authorUser = new User
-                    //{
-                    //    Email = "test2@mail.bg",
-                    //    UserName = "test2",
-                    //    Name = "TESTA POPO",
-                    //    BirthDate = DateTime.UtcNow
-                    //};
-
-                    //await userManager.CreateAsync(authorUser, "123456");
-
-                    //await userManager.AddToRoleAsync(authorUser, authorName);
-
-                    //var trainerUser = new User
-                    //{
-                    //    Email = "trainer@mail.bg",
-                    //    UserName = "Some1",
-                    //    Name = "Some SOME",
-                    //    BirthDate = DateTime.UtcNow
-                    //};
-
-                    //await userManager.CreateAsync(trainerUser, "123456");
-
-                    //await userManager.AddToRoleAsync(trainerUser, trainerName);
-
-                    //trainerUser = new User
-                    //{
-                    //    Email = "trainer2@mail.bg",
-                    //    UserName = "Some2",
-                    //    Name = "Some SOME2",
-                    //    BirthDate = DateTime.UtcNow
-                    //};
-
-                    //await userManager.CreateAsync(trainerUser, "123456");
-
-                    //await userManager.AddToRoleAsync(trainerUser, trainerName);
+                    }     
                 }).Wait();
             }
             return app;

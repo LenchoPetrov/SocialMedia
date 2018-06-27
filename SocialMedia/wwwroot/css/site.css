@@ -373,7 +373,7 @@ a:active {
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
     margin-top: 5px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
     .my-btns:hover {
@@ -386,4 +386,21 @@ a:active {
 
 ::placeholder {
     color: black;
+}
+
+.search-button {
+    margin-left: 10px;
+    margin-top: auto;
+}
+
+figure.snip1578 figcaption.manage-menu {
+    margin-left: 40px;
+}
+
+div .manage-menu {
+    margin-left: 60px;
+}
+
+.manage-options {
+    margin-top: 30px;
 }

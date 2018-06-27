@@ -13,7 +13,11 @@ namespace SocialMedia.Views.Manage
 
         public static string Index => "Index";
 
+        public static string AccountSettings => "AccountSettings";
+
         public static string ChangePassword => "ChangePassword";
+
+        public static string ChangeProfilePicture => "ChangeProfilePicture";
 
         public static string ExternalLogins => "ExternalLogins";
 
@@ -24,6 +28,10 @@ namespace SocialMedia.Views.Manage
         public static string ChangePasswordNavClass(ViewContext viewContext) => PageNavClass(viewContext, ChangePassword);
 
         public static string ExternalLoginsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ExternalLogins);
+
+        public static string ChangeProfilePictureClass(ViewContext viewContext) => PageNavClass(viewContext, ChangeProfilePicture);
+
+        public static string AccountSettingsClass(ViewContext viewContext) => PageNavClass(viewContext, AccountSettings);
 
         public static string TwoFactorAuthenticationNavClass(ViewContext viewContext) => PageNavClass(viewContext, TwoFactorAuthentication);
     

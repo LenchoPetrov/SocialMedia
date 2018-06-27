@@ -1,11 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SocialMedia.Areas.Admin.Views.Users
-{
-    public class Delete
-    {
-    }
+﻿@model AdminUsersViewModel
+@{
+    ViewData["Title"] = "All Users";
 }
+<link href="~/css/site.css" rel="stylesheet" />
+
+<h2 class="text-main">@ViewData["Title"]</h2>
+
+<table class="table table-bordered table-hover form-color text-main">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users.Result.ToList())
+        {
+            <tr>
+                <th>@user.Username</th>
+                <th>@user.Name</th>
+                <th>@user.Email</th>
+                <th>
+                    <form asp-controller="Users" asp-action="AddToRole" method="post">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input type="hidden" name="UserId" value="@user.Id" />
+                                @if (user.IsInRole)
+                                {
+                                    <select name="Role" asp-items="@Model.Roles" class="form-control my-input text-main"></select>
+                                }
+                                else
+                                {
+                                    <select name="Role" asp-items="@Model.Roles" class="form-control my-input text-main">
+                                        <option  selected="selected">---</option>
+                                    </select>
+                                }
+
+                            </div>
+                            <div class="col-md-4">
+                                <input class="btn btn-sm my-btns" type="submit" value="Add To Role" />
+                            </div>
+                        </div>
+                    </form>
+                </th>
+                <th>
+                    @if (!user.IsInRole || user.Username == User.Identity.Name)
+                    {
+                        <a asp-area="Admin" asp-controller="Users" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                        <a asp-area="Admin" asp-controller="Users" asp-action="Delete" asp-route-id="@user.Id">Delete</a>
+                    }
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>

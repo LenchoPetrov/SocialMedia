@@ -105,7 +105,7 @@ using SocialMedia.Data.Models;
 #line default
 #line hidden
             BeginContext(88, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5d1297132cdd4e5582f4fc9b66d84225", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8380b1133e504445ade2bf6657afdb05", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -133,12 +133,12 @@ using SocialMedia.Data.Models;
             WriteLiteral("        <article class=\"col-lg-2 col-md-2 col-sm-2 col-xs-2\">\r\n            <div class=\"panel my-panel\">\r\n                <div class=\"panel-body\">\r\n                    <div class=\"add-button\">\r\n                        ");
             EndContext();
             BeginContext(622, 271, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "743b35322ae643a2afe1dbe1bbd9822a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4884adc515fc421a991c50ff922a42f4", async() => {
                 BeginContext(775, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
                 BeginContext(805, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4b528c86df5847709b0fdf0f0aa66753", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "95990d26529646799dc338a6ebbdb7be", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -201,12 +201,12 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n                    </div>\r\n                    <div class=\"edit-delete\">\r\n                        ");
             EndContext();
             BeginContext(994, 207, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06b073fbb56946cfbd443b540895dfcd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc938acbea9d47e082e3625774322c47", async() => {
                 BeginContext(1103, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
                 BeginContext(1133, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "eea730c4c79e450fbe6107f51bb2c6b2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d9d5aeac64cc4da1b47a2a1d012ce7a0", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -259,12 +259,12 @@ using SocialMedia.Data.Models;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(1227, 213, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06a065833b0b4f36b3ec019e1eefba28", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8351f57283b54acf974f120badfcca2d", async() => {
                 BeginContext(1340, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
                 BeginContext(1370, 40, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "aa4461716b054d7d8a4f4519ce30d4dc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7df9af8b92a04e818e6f0a1edf1f85cc", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -345,7 +345,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            ");
             EndContext();
             BeginContext(1849, 176, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "514110409aab4544b018c4756145dd58", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6f98268ae024e18a0bd4ae297101857", async() => {
                 BeginContext(1945, 22, true);
                 WriteLiteral("\r\n                <img");
                 EndContext();

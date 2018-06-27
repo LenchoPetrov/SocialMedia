@@ -16,7 +16,7 @@
     {
         <span><img src="@Model.ProfileImage" alt="profile-sample6" class="profile-image" /></span>
     }
-    <figcaption>
+    <figcaption class="manage-menu">
         <h2 class="text-main">@Model.Name</h2>
         <h5 class="text-main">@Model.Username</h5>
         @*<div class="icons">
@@ -25,10 +25,8 @@
                 <a href="#"> <i class="ion-social-github"></i></a>
             </div>*@
     </figcaption>
-    <div class="menu">
+    <div class=" manage-menu menu">
         <a asp-controller="Albums" asp-action="Index" asp-route-id="@Model.UserId" class="text-main menu-button">Pictures</a>
-        <a asp-action="ChangeProfilePicture" class="text-main menu-button">Change Profile Picture</a>
-        <a asp-controller="Manage" asp-action="AccountSettings" class="text-main">Account Settings</a>
     </div>
 </figure>
 
@@ -58,7 +56,7 @@
                 <form method="post" asp-action="Create" asp-controller="Comments">
                     <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
                     <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
-                    <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
+                    <input onclick="addComment()" class="btn my-btns" type="button" value="Comment" />
                 </form>
                 <div id="commentsReload">
                     @Html.Partial("Comments", picture.Comments)

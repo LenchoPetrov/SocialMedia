@@ -10,16 +10,16 @@
     <div class="col-md-4 form-color text-main">
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label asp-for="Description"></label>
+                <label class="text-main" asp-for="Description"></label>
                 <input asp-for="Description" class="form-control my-input text-main" />
                 <span asp-validation-for="Description" class="form-text text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="file" name="Photo" style="display: none" />
-                <button type="button" class="btn btn-default" onclick="document.getElementsByName('Photo')[0].click()">Choose picture!</button>
+                <button type="button" class="btn my-btns" onclick="document.getElementsByName('Photo')[0].click()">Choose picture!</button>
             </div>
             <div class="form-group">
-                <label>Album</label>
+                <label class="text-main">Album</label>
                 @if (Model.AlbumTitle == null && Model.AlbumId == 0)
                 {
                     <select asp-for="AlbumId" asp-items="@Model.Albums" class="form-control"></select>
@@ -34,7 +34,7 @@
                 }
             </div>
             <div>
-                <input class="btn btn-success" type="submit" value="Upload Picture" />
+                <input class="btn my-btns" type="submit" value="Upload Picture" />
             </div>
             <br />
         </form>

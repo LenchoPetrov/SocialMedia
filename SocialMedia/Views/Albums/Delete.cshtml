@@ -10,13 +10,13 @@
     <div class="col-md-4 form-color text-main">
         <form method="post" asp-action="Destroy">
             <div class="form-group">
-                <label asp-for="Title"></label>
+                <label class="text-main" asp-for="Title"></label>
                 <input asp-for="Title" class="form-control my-input text-main" />
                 <span asp-validation-for="Title" class="form-text text-danger"></span>
             </div>
             <div>
                 <input type="hidden" name="albumId" value="@Model.Id" />
-                <input class="btn btn-danger" type="submit" value="Delete Album" />
+                <input class="btn my-btns" type="submit" value="Delete Album" />
             </div>
             <br />
         </form>

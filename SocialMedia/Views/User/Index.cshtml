@@ -80,7 +80,7 @@
                 <form method="post" asp-action="Create" asp-controller="Comments">
                     <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
                     <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
-                    <input onclick="addComment()" class="btn btn-success" type="button" value="Comment" />
+                    <input onclick="addComment()" class="btn my-btns" type="button" value="Comment" />
                 </form>
                 <div id="commentsReload">
                     @Html.Partial("Comments", picture.Comments)
