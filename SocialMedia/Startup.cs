@@ -1,20 +1,20 @@
 ﻿namespace SocialMedia
 {
     using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using SocialMedia.Data.Data;
-    using SocialMedia.Data.Models;
-    using SocialMedia.Infrastructure.Extensions;
     using SocialMedia.Services;
+    using SocialMedia.Data.Models;
+    using SocialMedia.Services.Common.Interfaces;
+    using SocialMedia.Services.Common.Implementations;
     using SocialMedia.Services.Admin.Implementations;
     using SocialMedia.Services.Admin.Interfaces;
-    using SocialMedia.Services.Common.Implementations;
-    using SocialMedia.Services.Common.Interfaces;
+    using SocialMedia.Data.Data;
+    using Microsoft.AspNetCore.Mvc;
+    using SocialMedia.Infrastructure.Extensions;
 
     public class Startup
     {

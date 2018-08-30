@@ -59,7 +59,7 @@
 
             albumService.DeleteAlbum(1);
             var result = db.Albums.ToHashSet();
-            
+
             //Assert
             result.Should()
                 .Match(a => a.ElementAt(0).Id == 2)
@@ -79,7 +79,7 @@
 
             //Act
             var albumService = new AlbumService(db);
-            
+
             albumService.EditAlbum(1, "Edit Album");
             var result = db.Albums.ToHashSet();
 
@@ -282,16 +282,27 @@
             var db = GetDatabase();
             var pictureService = new PictureService(db);
 
+            var album = new Album()
+            {
+                Id = 2,
+                Title = "New Album"
+            };
+
+            db.Add(album);
+            db.SaveChanges();
+
             var picture1 = new Picture()
             {
                 Id = 1,
-                Description = "Picture"
+                Description = "Picture",
+                AlbumId = 2
             };
 
             var picture2 = new Picture()
             {
                 Id = 2,
-                Description = "Picture2"
+                Description = "Picture2",
+                AlbumId = 2
             };
 
             db.AddRange(picture1, picture2);
@@ -325,7 +336,7 @@
 
             db.Add(picture1);
             db.SaveChanges();
-           
+
             //Act
             pictureService.EditPicture(1, "New Picture");
 
@@ -419,7 +430,7 @@
 
             db.Add(album);
             db.SaveChanges();
-            
+
             var picture1 = new Picture()
             {
                 Id = 1,

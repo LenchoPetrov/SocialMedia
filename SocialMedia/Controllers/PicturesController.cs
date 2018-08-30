@@ -4,6 +4,7 @@
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using SocialMedia.Common;
+    using SocialMedia.Infrastructure;
     using SocialMedia.Services.Common.Interfaces;
     using SocialMedia.Services.Common.Models;
     using System.Linq;
@@ -54,7 +55,7 @@
 
             if (!success)
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
 
             return RedirectToAction("Album", "Albums", new { id = albumId });
@@ -62,14 +63,14 @@
 
         public IActionResult Delete(int id)
         {
-            if (pictures.UserIsOwner(id, User.Identity.Name))
+            if (pictures.UserIsOwner(id, User.Identity.Name) || User.IsInRole(GlobalConstants.AdministratorRole))
             {
                 var pictureInfo = pictures.GetPictureInfo(id);
                 return View(new DeletePicture { Id = id, Description = pictureInfo.Description, PublishDate = pictureInfo.PublishDate, AlbumName = pictureInfo.AlbumName });
             }
             else
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
         }
 
@@ -83,14 +84,14 @@
 
         public IActionResult Edit(int id)
         {
-            if (pictures.UserIsOwner(id, User.Identity.Name))
+            if (pictures.UserIsOwner(id, User.Identity.Name) || User.IsInRole(GlobalConstants.AdministratorRole))
             {
                 var pictureInfo = pictures.GetPictureInfo(id);
                 return View(new EditPicture { Id = id, Description = pictureInfo.Description });
             }
             else
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
         }
 
@@ -104,7 +105,14 @@
 
         public IActionResult Index(int id)
         {
-            return View(pictures.GetPicture(id));
+            try
+            {
+                return View(pictures.GetPicture(id));
+            }
+            catch (System.Exception)
+            {
+                return Redirect("/NotFound");
+            }
         }
     }
 }

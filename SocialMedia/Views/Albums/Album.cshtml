@@ -1,6 +1,6 @@
 ﻿@model PicturesAlbum
 @{
-    ViewData["Title"] = "Create Album";
+    ViewData["Title"] = "Album " + Model.AlbumName;
     var num = 1;
 }
 <link href="~/css/albums.css" rel="stylesheet" />
@@ -9,7 +9,7 @@
 <br />
 <div class="container form-color">
     <br />
-    @if (Model.UserName == User.Identity.Name || User.IsInRole("Administrator"))
+    @if (Model.UserName == User.Identity.Name || User.IsInRole(GlobalConstants.AdministratorRole))
     {
         <article class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <div class="panel my-panel">
@@ -34,7 +34,7 @@
 
     @foreach (var pic in Model.Pictures)
     {
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 picture">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 picture-album">
             @{
                 var base64 = Convert.ToBase64String(pic.Photo);
                 var imgSrc = String.Format("data:image/gif;base64,{0}", base64);

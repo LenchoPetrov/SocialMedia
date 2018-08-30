@@ -4,29 +4,44 @@
     <div class="form-color stuck">
         @foreach (var comment in Model.Comments)
         {
-            <div class="comment">
-                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@comment.UserId">
-                    @if (comment.UserProfileImage == null)
-                    {
-                        <span><img src="~/images/Default profile icon.png" class="comment-avatar" /></span>
-                    }
-                    else
-                    {
-                        <span><img src="@comment.UserProfileImage" class="comment-avatar" /></span>
-                    }
-                    <span class="comment-name text-main">@comment.Name</span>
-                </a>
-                <span class="text-main comment-date">• @comment.PublishDate</span>
-                @if (User.Identity.Name == comment.PictureOwnerUserName || User.Identity.Name == comment.UserName || User.IsInRole("Administrator"))
+        <div class="comment">
+            <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@comment.UserId">
+                @if (comment.UserProfileImage == null)
                 {
-                    <form method="post" asp-controller="Comments" asp-action="Delete">
-                        <button type="button" onclick="deleteComment(@Model.SectionNumber,@comment.Id,@comment.PictureId)" class="close delete-comment" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </form>
+                    <span><img src="~/images/Default profile icon.png" class="comment-avatar" /></span>
                 }
-                <div class="comment-content text-main">@comment.Content</div>
-            </div>
+                else
+                {
+                    <span><img src="@comment.UserProfileImage" class="comment-avatar" /></span>
+                }
+                @if (Model.IsHomePage == true)
+                {
+                    <span class="comment-name text-main comment-hide-long-name">@comment.Name</span>
+                }
+                else
+                {
+                    <span class="comment-name text-main">@comment.Name</span>
+                }
+            </a>
+            @if (Model.IsHomePage == true)
+            {
+                <span class="text-main comment-date comment-name">• @comment.PublishDate</span>
+            }
+            else
+            {
+                <span class="text-main comment-date">• @comment.PublishDate</span>
+            }
+
+            @if (User.Identity.Name == comment.PictureOwnerUserName || User.Identity.Name == comment.UserName || User.IsInRole(GlobalConstants.AdministratorRole))
+            {
+                <form method="post" asp-controller="Comments" asp-action="Delete">
+                    <button type="button" onclick="deleteComment(@Model.SectionNumber,@comment.Id,@comment.PictureId)" class="close delete-comment" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </form>
+            }
+            <div class="comment-content text-main">@comment.Content</div>
+        </div>
             <br />
         }
     </div>

@@ -36,12 +36,12 @@
                 <ul class="nav navbar-nav">
                     @if (User.IsInRole(GlobalConstants.AdministratorRole))
                     {
-                        <li><a asp-area="Admin" asp-controller="Users" asp-action="Index" class="fa fa-group" style="font-size:26px"></a></li>
+                        <li><a asp-area="Admin" asp-controller="Users" asp-action="Index" class="fa fa-group size-26"></a></li>
                     }
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li><a asp-area="" asp-controller="Search" asp-action="Users" class="glyphicon glyphicon-search" style="font-size:26px"></a></li>
-                        <li><a asp-area="" asp-controller="Messages" asp-action="Index" class="fa fa-envelope-o" style="font-size:26px"></a></li>
+                        <li><a asp-area="" asp-controller="Search" asp-action="Users" class="glyphicon glyphicon-search size-26"></a></li>
+                        <li><a asp-area="" asp-controller="Messages" asp-action="Index" class="fa fa-envelope-o size-26" ></a></li>
                     }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")

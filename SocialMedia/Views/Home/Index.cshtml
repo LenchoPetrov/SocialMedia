@@ -41,7 +41,7 @@ else
                                 <input onclick="addComment(@n)" class="btn my-btns" type="button" value="Comment" />
                             </form>
                             <div id="commentsReload-@n">
-                                @Html.Partial("Comments", new CommentsAndSection { Comments = picture.Comments, SectionNumber = n })
+                                @Html.Partial("Comments", new CommentsAndSection { Comments = picture.Comments, SectionNumber = n, IsHomePage = true })
                             </div>
                         </div>
                     </div>

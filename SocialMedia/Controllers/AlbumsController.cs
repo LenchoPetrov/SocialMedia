@@ -1,9 +1,12 @@
 ﻿namespace SocialMedia.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using SocialMedia.Infrastructure;
     using SocialMedia.Services.Common.Interfaces;
     using SocialMedia.Services.Common.Models;
 
+    [Authorize]
     public class AlbumsController : Controller
     {
         private readonly IAlbumService albums;
@@ -31,13 +34,13 @@
 
         public IActionResult Delete(int albumId)
         {
-            if (albums.UserIsOwner(albumId, User.Identity.Name))
+            if (albums.UserIsOwner(albumId, User.Identity.Name) || User.IsInRole(GlobalConstants.AdministratorRole))
             {
                 return View(new DeleteAlbum { Id = albumId, Title = albums.GetAlbumTitle(albumId), PicturesCount = albums.GetPicturesCount(albumId) });
             }
             else
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
         }
 
@@ -52,13 +55,13 @@
 
         public IActionResult Edit(int albumId)
         {
-            if (albums.UserIsOwner(albumId, User.Identity.Name))
+            if (albums.UserIsOwner(albumId, User.Identity.Name) || User.IsInRole(GlobalConstants.AdministratorRole))
             {
                 return View(new EditAlbum { Id = albumId, Title = albums.GetAlbumTitle(albumId) });
             }
             else
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
         }
 
@@ -77,14 +80,14 @@
 
         public IActionResult SetAsAlbumPhoto(int photoId, int albumId)
         {
-            if (albums.UserIsOwner(albumId, User.Identity.Name))
+            if (albums.UserIsOwner(albumId, User.Identity.Name) || User.IsInRole(GlobalConstants.AdministratorRole))
             {
                 albums.SetAlbumPicture(photoId, albumId);
                 return RedirectToAction(nameof(Album), "Albums", new { id = albumId });
             }
             else
             {
-                return View(nameof(NotFound));
+                return Redirect("/NotFound");
             }
         }
     }

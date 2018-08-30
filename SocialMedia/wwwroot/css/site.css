@@ -79,7 +79,7 @@ hr {
     transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25), -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
     -webkit-transform: scale(1);
     transform: scale(1);
-    color: #ffffff;
+    color: #e0e0e0;
     border-radius: 8px;
 }
 
@@ -123,7 +123,7 @@ hr {
 }
 
 .picture {
-    padding: 0;
+    padding:0;
 }
 
 .profile-image {
@@ -270,9 +270,9 @@ a:active {
 }
 
 .not-found {
-    font-size: 300px;
     margin: auto;
-    width: 40%;
+    display: flex;
+    height: 600px;
 }
 
 .back {
@@ -427,14 +427,62 @@ div .manage-menu {
 .profile-name {
     padding-left: 120px;
     font-size: 24px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-.profile-info{
-    margin-top:5px;
+.profile-info {
+    margin-top: 5px;
 }
 
-.comments-section{
-    padding:0 0 0 9px;
-    
+.comments-section {
+    padding: 0 0 0 9px;
+}
+
+.search-input {
+    width: 250px;
+    float: left;
+}
+
+.search-div {
+    overflow: hidden;
+    padding-right: .5em;
+}
+
+input.none {
+    display: none;
+}
+
+a.size-26 {
+    font-size: 26px;
+}
+
+.text-danger {
+    color: #7d0101
+}
+
+.a-admin {
+    color: #0001ac;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #444;
+    border-radius: 0px;
+}
+
+.table-bordered {
+    border-radius: 0px;
+    border: 1px solid #444;
+}
+
+.picture-album {
+    padding: 1px;
+    height: 260px;
+}
+
+.comment-hide-long-name {
+    display: block;
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

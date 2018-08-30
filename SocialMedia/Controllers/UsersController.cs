@@ -1,5 +1,6 @@
 ﻿namespace SocialMedia.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using SocialMedia.Data.Models;
@@ -8,6 +9,7 @@
     using System;
     using System.Threading.Tasks;
 
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IUserService userService;

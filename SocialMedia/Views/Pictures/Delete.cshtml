@@ -10,23 +10,23 @@
     <div class="col-md-4 form-color text-main">
         <form method="post" asp-action="Destroy">
             <div class="form-group">
-                <label asp-for="Description"></label>
+                <label asp-for="Description" class="text-main"></label>
                 <input asp-for="Description" class="form-control my-input text-main" disabled />
                 <span asp-validation-for="Description" class="form-text text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PublishDate"></label>
+                <label asp-for="PublishDate" class="text-main"></label>
                 <input asp-for="PublishDate" class="form-control my-input text-main" type="date" disabled />
                 <span asp-validation-for="PublishDate" class="form-text text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AlbumName"></label>
+                <label asp-for="AlbumName" class="text-main"></label>
                 <input asp-for="AlbumName" class="form-control my-input text-main" disabled />
                 <span asp-validation-for="AlbumName" class="form-text text-danger"></span>
             </div>
             <div>
                 <input type="hidden" name="id" value="@Model.Id" />
-                <input class="btn btn-danger" type="submit" value="Delete Picture" />
+                <input class="btn my-btns" type="submit" value="Delete Picture" />
             </div>
             <br />
         </form>

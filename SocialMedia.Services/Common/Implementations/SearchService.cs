@@ -48,7 +48,8 @@
                     Id = u.Id,
                     Email = u.Email,
                     Name = u.Name,
-                    Username = u.UserName
+                    Username = u.UserName,
+                    ProfileImage = u.ProfilePicture == null ? null : String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(u.ProfilePicture))
                 }).ToListAsync();
         }
     }

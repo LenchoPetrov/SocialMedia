@@ -7,5 +7,7 @@
         public IEnumerable<CommentIndex> Comments { get; set; }
 
         public int SectionNumber { get; set; }
+
+        public bool IsHomePage { get; set; } = false;
     }
 }

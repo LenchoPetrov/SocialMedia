@@ -5,13 +5,12 @@
 <script src="~/js/albums.js"></script>
 <link href="~/css/albums.css" rel="stylesheet" />
 <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
-<a class="glyphicon glyphicon-arrow-left text-main back" href="back" onClick="history.go(-1); return false;">Back</a>
 
 <h2 class="text-main">@ViewData["Title"]</h2>
 
 <div class="container form-color">
     <br />
-    @if (Model.UserName == User.Identity.Name || User.IsInRole("Administrator"))
+    @if (Model.UserName == User.Identity.Name)
     {
         <article class="col-xs-12 col-sm-6 col-md-3">
             <div class="panel my-panel">

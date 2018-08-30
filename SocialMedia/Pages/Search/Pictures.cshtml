@@ -1,0 +1,33 @@
+﻿@page
+@model SocialMedia.Pages.Search.PicturesModel
+@{
+    ViewData["Title"] = "Pictures";
+}
+
+<h1 class="text-main">Search Pictures</h1>
+<a asp-page="./Pictures" asp-route-SearchString="@string.Empty" class="text-main">
+    Pictures
+</a>
+<a asp-page="./Users" asp-route-SearchString="@string.Empty" class="text-main">
+    Users
+</a>
+<form asp-page-handler="Pictures" method="post">
+    <input class="form-control my-input form-color text-main search-input" type="text" id="SearchString" name="SearchString" placeholder="Search picture by description">
+    <div class="search-div">
+        <button type="submit" class="btn my-btns search-button">Search</button>
+    </div>
+</form>
+<br />
+@if (Model.Pictures != null)
+{
+    <div class="container form-color">
+        @foreach (var pic in Model.Pictures)
+        {
+            <div class="col-md-1">
+                <a asp-area="" asp-controller="Pictures" asp-action="Index" asp-route-id="@pic.Id" class="zoom">
+                    <img src="@pic.Photo" class="img-responsive photo" />
+                </a>
+            </div>
+        }
+    </div>
+}

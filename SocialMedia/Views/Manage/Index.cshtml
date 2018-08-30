@@ -19,11 +19,6 @@
     <figcaption class="manage-menu">
         <h2 class="text-main">@Model.Name</h2>
         <h5 class="text-main">@Model.Username</h5>
-        @*<div class="icons">
-                <a href="#"><i class="ion-social-twitter"></i></a>
-                <a href="#"> <i class="ion-social-instagram-outline"></i></a>
-                <a href="#"> <i class="ion-social-github"></i></a>
-            </div>*@
     </figcaption>
     <div class=" manage-menu menu">
         <a asp-controller="Albums" asp-action="Index" asp-route-id="@Model.UserId" class="text-main menu-button">Pictures</a>

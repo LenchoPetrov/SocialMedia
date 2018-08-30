@@ -1,8 +1,10 @@
 ﻿namespace SocialMedia.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using SocialMedia.Services.Common.Interfaces;
 
+    [Authorize]
     public class FollowersController : Controller
     {
         private readonly IFollowerService followers;

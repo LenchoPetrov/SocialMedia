@@ -5,10 +5,12 @@
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using SocialMedia.Areas.Admin.Models;
+    using SocialMedia.Controllers;
     using SocialMedia.Data.Models;
     using SocialMedia.Infrastructure;
     using SocialMedia.Services.Admin.Interfaces;
     using SocialMedia.Services.Admin.Models;
+    using SocialMedia.Services.Common.Interfaces;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -16,19 +18,28 @@
     [Authorize(Roles = GlobalConstants.AdministratorRole)]
     public class UsersController : Controller
     {
+        private readonly IUserService userService;
+
         private readonly IAdminService admins;
 
         private readonly RoleManager<IdentityRole> roleManager;
 
         private readonly UserManager<User> userManager;
 
+        private readonly SignInManager<User> signInManager;
+
         public UsersController(IAdminService admins,
             RoleManager<IdentityRole> roleManager,
-            UserManager<User> userManager)
+            UserManager<User> userManager,
+            IUserService userService,
+            SignInManager<User> signInManager
+            )
         {
             this.admins = admins;
             this.roleManager = roleManager;
             this.userManager = userManager;
+            this.userService = userService;
+            this.signInManager = signInManager;
         }
 
         public async Task<IActionResult> Index()
@@ -78,7 +89,14 @@
         [HttpPost]
         public IActionResult Delete(DeleteUserViewModel model)
         {
+            var userId = userService.GetUserId(User.Identity.Name);
+            var takenId = model.Id;
             this.admins.DeleteUser(model.Id);
+            if (takenId == userId)
+            {
+                signInManager.SignOutAsync();
+                return RedirectToAction("Login", "Account");
+            }
             return RedirectToAction(nameof(Index));
         }
 
