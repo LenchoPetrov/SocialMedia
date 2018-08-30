@@ -1,12 +1,8 @@
-﻿using SocialMedia.Services.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SocialMedia.Models.ManageViewModels
+﻿namespace SocialMedia.Models.ManageViewModels
 {
+    using SocialMedia.Services.Common.Models;
+    using System.Collections.Generic;
+
     public class IndexViewModel
     {
         public string Username { get; set; }

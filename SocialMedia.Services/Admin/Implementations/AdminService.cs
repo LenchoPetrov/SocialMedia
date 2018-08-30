@@ -1,5 +1,4 @@
-﻿//TODO
-namespace SocialMedia.Services.Admin.Implementations
+﻿namespace SocialMedia.Services.Admin.Implementations
 {
     using Microsoft.AspNetCore.Identity;
     using SocialMedia.Data.Data;

@@ -1,10 +1,5 @@
 ﻿namespace SocialMedia.Controllers
 {
-    using System;
-    using System.Linq;
-    using System.Text;
-    using System.Text.Encodings.Web;
-    using System.Threading.Tasks;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -16,6 +11,11 @@
     using SocialMedia.Services;
     using SocialMedia.Services.Common.Interfaces;
     using SocialMedia.Services.Common.Models;
+    using System;
+    using System.Linq;
+    using System.Text;
+    using System.Text.Encodings.Web;
+    using System.Threading.Tasks;
 
     [Authorize]
     [Route("[controller]/[action]")]

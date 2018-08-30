@@ -1,15 +1,15 @@
-﻿using FluentAssertions;
-using Microsoft.EntityFrameworkCore;
-using SocialMedia.Data.Data;
-using SocialMedia.Data.Models;
-using SocialMedia.Services.Common.Implementations;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Xunit;
-
-namespace SocialMedia.Tests
+﻿namespace SocialMedia.Tests
 {
+    using FluentAssertions;
+    using Microsoft.EntityFrameworkCore;
+    using SocialMedia.Data.Data;
+    using SocialMedia.Data.Models;
+    using SocialMedia.Services.Common.Implementations;
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Xunit;
+
     public class Tests
     {
         private SocialMediaDbContext GetDatabase()

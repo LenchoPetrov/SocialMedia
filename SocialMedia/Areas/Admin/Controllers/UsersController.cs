@@ -1,5 +1,4 @@
-﻿
-namespace SocialMedia.Areas.Admin.Controllers
+﻿namespace SocialMedia.Areas.Admin.Controllers
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;

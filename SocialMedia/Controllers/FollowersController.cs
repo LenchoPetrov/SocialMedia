@@ -2,10 +2,6 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using SocialMedia.Services.Common.Interfaces;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
 
     public class FollowersController : Controller
     {

@@ -1,10 +1,7 @@
-﻿using SocialMedia.Services.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SocialMedia.Services.Common.Interfaces
+﻿namespace SocialMedia.Services.Common.Interfaces
 {
+    using SocialMedia.Services.Common.Models;
+
     public interface IAlbumService
     {
         int CreateAlbum(string title, string username);

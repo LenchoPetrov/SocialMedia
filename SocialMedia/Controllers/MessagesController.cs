@@ -5,10 +5,7 @@
     using Microsoft.AspNetCore.Mvc.Rendering;
     using SocialMedia.Services.Common.Interfaces;
     using SocialMedia.Services.Common.Models;
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Threading.Tasks;
 
     [Authorize]
     public class MessagesController : Controller
