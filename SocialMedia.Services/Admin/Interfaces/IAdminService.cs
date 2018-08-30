@@ -15,7 +15,5 @@
         EditUserViewModel GetUserEdit(string userId);
 
         void EditUser(EditUserViewModel model);
-
-        void CreateUser(CreateUserViewModel model);
     }
 }

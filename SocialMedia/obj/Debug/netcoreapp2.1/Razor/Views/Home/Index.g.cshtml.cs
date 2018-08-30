@@ -123,7 +123,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("! You can find and follow users ");
             EndContext();
             BeginContext(197, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d11dcb78a08487db263857ab5198075", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67d76eca6ed34d658055b8f30c5c245d", async() => {
                 BeginContext(255, 4, true);
                 WriteLiteral("here");
                 EndContext();
@@ -169,7 +169,7 @@ else
             WriteLiteral("                <div>\r\n                    <p class=\"my-row header\">\r\n                        ");
             EndContext();
             BeginContext(614, 634, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1cb4520ec8e44a02990ff9d0c9b6c624", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2a4a624e53849f9a4af67ed4ac84c7e", async() => {
                 BeginContext(701, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -183,7 +183,7 @@ else
                 WriteLiteral("                                <span>");
                 EndContext();
                 BeginContext(840, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4b73bb5d5d8346db8e2b130ff36f4a75", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3e094f5d341343aab02514e3c54bb78f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -285,7 +285,7 @@ WriteAttributeValue("", 1057, picture.UserProfilePhoto, 1057, 25, false);
             WriteLiteral("</span>\r\n                    </p>\r\n                    <div class=\"flex\">\r\n                        ");
             EndContext();
             BeginContext(1414, 250, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d701813ae374fc59c515b8cefa74a9c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b59392f31844f0f9ad098ca74f2876e", async() => {
                 BeginContext(1553, 34, true);
                 WriteLiteral("\r\n                            <img");
                 EndContext();
@@ -335,7 +335,7 @@ WriteAttributeValue("", 1593, picture.Photo, 1593, 14, false);
             WriteLiteral("\r\n                        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-4 comments-section\">\r\n                            ");
             EndContext();
             BeginContext(1786, 494, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4706b67a27c443c788cac84b75654fcf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "996240a6885740ff9fbb7443840a93f8", async() => {
                 BeginContext(1852, 43, true);
                 WriteLiteral("\r\n                                <textarea");
                 EndContext();

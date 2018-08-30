@@ -109,7 +109,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("        <div class=\"comment\">\r\n            ");
             EndContext();
             BeginContext(205, 788, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a262bcf5bfd44f4ea22f5d024a218adc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0052373ccb124b0ea2169191fa32acef", async() => {
                 BeginContext(292, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -123,7 +123,7 @@ using SocialMedia.Data.Models;
                 WriteLiteral("                    <span>");
                 EndContext();
                 BeginContext(395, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b5e326df1be84325aa2dcf9baad8410d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2a8e2c01e91d46d7b0b81d7feeb1054a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -307,7 +307,7 @@ WriteAttributeValue("", 570, comment.UserProfileImage, 570, 25, false);
             WriteLiteral("                ");
             EndContext();
             BeginContext(1495, 356, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bdaad6edd514432a9fb03ed1d57ed1c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ab97f652d8c454eb08009419fac4c77", async() => {
                 BeginContext(1561, 43, true);
                 WriteLiteral("\r\n                    <button type=\"button\"");
                 EndContext();
