@@ -122,17 +122,5 @@
                 Username = u.UserName,
             }).FirstOrDefault(u => u.Id == userId);
         }
-
-        //TODO GENERATE PASSWORDHASH
-        public void CreateUser(CreateUserViewModel model)
-        {
-            var user = new User { UserName = model.Username, Email = model.Email, PhoneNumber = model.PhoneNumber, BirthDate = model.BirthDate, Name = model.Name, PasswordHash = model.Password };
-            //var userManager = serviceScope.ServiceProvider.GetService<UserManager<User>>();
-
-            //await userManager.CreateAsync(adminUser, model.Password);
-
-            this.db.Add(user);
-            this.db.SaveChanges();
-        }
     }
 }
