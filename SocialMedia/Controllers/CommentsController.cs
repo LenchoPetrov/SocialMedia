@@ -23,10 +23,11 @@
             //return RedirectToAction("Index", "Pictures", new { id = pictureId });
         }
 
-        public IActionResult Delete(int commentId, int pictureId)
+        [HttpPost]
+        public void Delete(int commentId, int pictureId)
         {
             comments.DeleteComment(commentId);
-            return RedirectToAction("Index", "Pictures", new { id = pictureId });
+            //return RedirectToAction("Index", "Pictures", new { id = pictureId });
         }
     }
 }

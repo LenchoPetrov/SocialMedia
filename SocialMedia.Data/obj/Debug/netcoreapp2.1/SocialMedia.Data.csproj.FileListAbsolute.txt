@@ -8,3 +8,4 @@ E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Data\obj\Debug\netco
 E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Data\obj\Debug\netcoreapp2.1\SocialMedia.Data.AssemblyInfo.cs
 E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Data\obj\Debug\netcoreapp2.1\SocialMedia.Data.dll
 E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Data\obj\Debug\netcoreapp2.1\SocialMedia.Data.pdb
+E:\Softuni Zadachi\ASP.NET Projects\SocialMedia\SocialMedia.Data\obj\Debug\netcoreapp2.1\SocialMedia.Data.csprojAssemblyReference.cache

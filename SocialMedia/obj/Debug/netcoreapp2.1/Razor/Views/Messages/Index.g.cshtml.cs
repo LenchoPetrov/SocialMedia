@@ -97,7 +97,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("<br />\r\n<a class=\"glyphicon glyphicon-arrow-left text-main back\" href=\"back\" onClick=\"history.go(-1); return false;\">Back</a>\r\n");
             EndContext();
             BeginContext(198, 105, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84faf40fee7f44e782b37aa2c2c98a15", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f089fe036f04ab5be9abc43abf7fc4f", async() => {
                 BeginContext(287, 12, true);
                 WriteLiteral("Send Message");
                 EndContext();
@@ -133,7 +133,7 @@ using SocialMedia.Data.Models;
             WriteLiteral("            <div class=\"messaage\">\r\n                ");
             EndContext();
             BeginContext(532, 818, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d1ce4c754e74227835c2553212d6c5b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3ce8e3637ef4854baab1f51ef614453", async() => {
                 BeginContext(678, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -147,7 +147,7 @@ using SocialMedia.Data.Models;
                 WriteLiteral("                        <span>");
                 EndContext();
                 BeginContext(798, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9ecdec66cadc4fc8a769cd079efe6f1f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3c5b4f005c4e46128548de61fa21f000", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

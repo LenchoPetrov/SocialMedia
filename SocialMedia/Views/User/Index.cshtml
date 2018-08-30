@@ -54,6 +54,7 @@
     </div>
 </figure>
 
+@{var n = 1; }
 <div class="row">
     <div class="main-view text-main form-color col-lg-8 col-md-8 col-sm-8 col-xs-8">
         @foreach (var picture in Model.Pictures.OrderByDescending(p => p.PublishDate))
@@ -78,25 +79,37 @@
                     <img src="@picture.Photo" class="img-responsive photo" />
                 </a>
                 <form method="post" asp-action="Create" asp-controller="Comments">
-                    <textarea id="commentText" rows="1" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
-                    <input type="hidden" name="pictureId" value="@picture.Id" id="pictureId" />
-                    <input onclick="addComment()" class="btn my-btns" type="button" value="Comment" />
+                    <textarea id="commentText-@n" rows="1" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...."></textarea>
+                    <input type="hidden" id="pictureId-@n" value="@picture.Id" />
+                    <input onclick="addComment(@n)" class="btn my-btns" type="button" value="Comment" />
                 </form>
-                <div id="commentsReload">
-                    @Html.Partial("Comments", picture.Comments)
+                <div id="commentsReload-@n">
+                    @Html.Partial("Comments", new CommentsAndSection { Comments = picture.Comments, SectionNumber = n })
                 </div>
             </div>
-            <br />
+            <hr class="hr-pic" />
+            n++;
         }
     </div>
 </div>
 <script>
-    function addComment() {
-        var pic = $("#pictureId").val();
-        var comment = $("#commentText").val();
-        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+    function addComment(n) {
+        var searchPic = "#pictureId-" + n;
+        var searchCom = "#commentText-" + n;
 
+        var pic = $(searchPic).val();
+        var comment = $(searchCom).val();
+
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment },
+            function () {
+                reloadFunction(n);
+            });
+    }
+
+    function reloadFunction(n) {
         location.reload();
-            $("#commentsReload").reload();
-        }
+        var searchComRel = "#commentsReload-" + n;
+
+        $(searchComRel).reload();
+    }
 </script>

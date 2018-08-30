@@ -18,35 +18,30 @@
     </div>
 </form>
 <br />
-<table class="table form-color text-main">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
+
+<div class="container form-color message-container">
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
         @foreach (var user in @Model.OrderBy(x => x.Username))
         {
-            <tr>
-                <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
-                        @user.Name
-                    </a>
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
+            <div class="search-profile col-lg-6">
+                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id">
+                    @if (user.ProfileImage == null)
+                    {
+                        <span><img src="~/images/Default profile icon.png" class="message-avatar" /></span>
 
-                        @user.Username
-                    </a>
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id" class="text-main">
-                        @user.Email
-                    </a>
-                </td>
-            </tr>
+                    }
+                    else
+                    {
+                        <span><img src="@user.ProfileImage" class="message-avatar" /></span>
+                    }
+
+                    <div class="profile-info">
+                        <span class="profile-name text-main">@user.Name</span>
+                        @*<span class="text-main message-date">• @user.Username</span>*@
+                        <div class="message-content text-main">@user.Username</div>
+                    </div>
+                </a>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</div>

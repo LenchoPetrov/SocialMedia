@@ -37,23 +37,34 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <form method="post" asp-action="Create" asp-controller="Comments">
-            <textarea id="commentText" rows="4" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
-            <input type="hidden" name="pictureId" value="@Model.Id" id="pictureId" />
-            <input onclick="addComment()" class="btn my-btns" type="button" value="Comment" />
+            <textarea id="commentText-1" rows="4" class="comment-textarea form-control my-input text-main" placeholder="Comment this photo...." name="commentContent"></textarea>
+            <input type="hidden" name="pictureId" value="@Model.Id" id="pictureId-1" />
+            <input onclick="addComment(1)" class="btn my-btns" type="button" value="Comment" />
         </form>
         <div id="commentsReload">
-            @Html.Partial("Comments", Model.Comments)
+            @Html.Partial("Comments", new CommentsAndSection { Comments = Model.Comments, SectionNumber = 1 })
         </div>
     </div>
 </div>
 
 <script>
-    function addComment() {
-        var pic = $("#pictureId").val();
-        var comment = $("#commentText").val();
-        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment });
+     function addComment(n) {
+        var searchPic = "#pictureId-" + n;
+        var searchCom = "#commentText-" + n;
 
+        var pic = $(searchPic).val();
+        var comment = $(searchCom).val();
+
+        $.post("@Url.Action("Create", "Comments")", { 'pictureId': pic, 'commentContent': comment },
+            function () {
+                reloadFunction(n);
+            });
+    }
+
+    function reloadFunction(n) {
         location.reload();
-            $("#commentsReload").reload();
-        }
+        var searchComRel = "#commentsReload-" + n;
+
+        $(searchComRel).reload();
+    }
 </script>

@@ -1,0 +1,47 @@
+﻿@page 
+@model SocialMedia.Pages.Search.Users2Model
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1 class="text-main">Search Users</h1>
+<a asp-page="./Pictures2" asp-route-SearchString="@string.Empty" class="text-main">
+    Pictures
+</a>
+<a asp-page="./Users2" asp-route-SearchString="@string.Empty" class="text-main">
+    Users
+</a>
+<form asp-page-handler="Users" method="post">
+    <input class="form-control my-input text-main form-color" type="text" id="SearchString" name="SearchString" placeholder="Search user by name/username" style="width: 250px;float: left">
+    <div style="overflow: hidden; padding-right: .5em;">
+        <button type="submit" class="btn my-btns search-button">Search</button>
+    </div>
+</form>
+<br />
+
+<div class="container form-color message-container">
+    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+        @foreach (var user in @Model.Users.OrderBy(x => x.Username))
+        {
+            <div class="search-profile col-lg-6">
+                <a asp-area="" asp-controller="User" asp-action="Index" asp-route-id="@user.Id">
+                    @if (user.ProfileImage == null)
+                    {
+                        <span><img src="~/images/Default profile icon.png" class="message-avatar" /></span>
+
+                    }
+                    else
+                    {
+                        <span><img src="@user.ProfileImage" class="message-avatar" /></span>
+                    }
+
+                    <div class="profile-info">
+                        <span class="profile-name text-main">@user.Name</span>
+                        @*<span class="text-main message-date">• @user.Username</span>*@
+                        <div class="message-content text-main">@user.Username</div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
